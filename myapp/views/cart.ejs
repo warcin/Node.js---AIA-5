@@ -1,0 +1,53 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Your cart</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+
+  <div class="container">
+    <h1>Cart</h1>
+    <div class="all_games_cart">
+      <%if(games){%>
+      <%for(var i=0;i<games.length;i++){%>
+      <div class="game">
+        <div class="info">Name: <%= games[i].name %> </div><!--
+        --><div class="info">Type: <%= games[i].type %> </div><!--
+        --><div class="info-cart-del">
+          <form method="POST" action="/remove_from_cart">
+            <input hidden type="text" name="gameID"  value= <%= games[i].id %>>
+            <input hidden type="text" name="gameName"  value= <%= games[i].name %>>
+            <input hidden type="text" name="gameType"  value= <%= games[i].type %>>
+            <button class="del_game">Remove from cart</button>
+          </form>
+        </div>
+		<br></br>
+      </div>
+      <%}%>
+      <%}%>
+    </div>
+    <a class="go_to" href="/"><img alt="home" src="/home.png" width="32" height="32"></a>
+   </div>
+    <div class="footer">
+      <div class="bottom">
+        <a class="btn" href="/purchase_all"><img alt="purchase" src="/checked.png" width="32" height="32"></a>
+        <p class="text_field">Order all items</p>
+      </div>
+  
+      <div class="bottom">
+        <a class="btn" href="/cancel_all"><img alt="cancel" src="/close.png" width="32" height="32"></a>
+        <p class="text_field">Cancel all items</p>
+      </div>
+    </div>
+
+
+
+
+</body>
+
+</html>

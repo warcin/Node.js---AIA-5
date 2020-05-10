@@ -1,0 +1,42 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Gamestart</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+
+  <div class="container">
+    <h1>Home page</h1>
+    <a href="/restart">Add games for tests</a>
+    <% if (info) { %>
+      <div class="notification">
+          <%= info %>
+      </div>
+    <% } %>
+    <div class="all_games">
+      <%for(var i=0;i<games.length;i++){%>
+        <div class="game">
+          <div class="info">Name: <%= games[i].name %> </div><!--
+          --><div class="info">Type: <%= games[i].type %> </div><!--
+          --><div class="info">
+            <form  method="POST" action="/add_to_cart">
+                <input hidden type="text" name="gameID"  value= <%= games[i].id %>>
+                <input hidden type="text" name="gameName"  value= <%= games[i].name %>>
+                <input hidden type="text" name="gameType"  value= <%= games[i].type %>>
+                <button class="add_game">Add to cart</button>
+            </form>
+          </div>
+          <br></br>
+        </div>
+      <%}%>
+    </div>
+      <a class="go_to" href="/cart"><img alt="shopping_cart" src="/basket.png" width="32" height="32"></a>
+  </div>
+
+</body>
+</html>

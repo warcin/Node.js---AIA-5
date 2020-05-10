@@ -1,0 +1,85 @@
+.info{
+    display: inline-block;
+    width: 20%;
+    text-align: center;
+    position: relative;
+    top: 10px;
+}
+
+.info-cart{
+    display: inline-block;
+    width: 20%;
+    text-align: center;
+    position: relative;
+    bottom: 10px;
+}
+
+.info-cart-del{
+    display: inline-block;
+    width: 20%;
+    text-align: center;
+	position: relative;
+	top: 10px;
+}
+
+body {
+	font-family: Impact, Charcoal, sans-serif;
+    width: 75%;
+    margin: auto;
+    background-color: rgb(188, 190, 200);
+}
+
+.go_to{
+    position: absolute;
+    top: 25px;
+    right: 25%;
+}
+
+.bottom {
+    display: inline-block;
+    margin-top: 50px;
+
+}
+
+.text_field{
+    width: 128px;
+}
+
+.btn{
+    position: relative;
+    left: 32px;
+}
+
+.footer{
+    width: 300px;
+    margin: auto;
+}
+
+.notification{
+	background-color: rgb(247, 230, 200);
+    height: 30px;
+    text-align: center;
+}
+
+h1 {
+    background-color: rgb(247, 230, 200);
+    width: 20%;
+    text-align: center;
+}
+
+.game{
+    border-width: 3px;
+    border-color: black;
+    border-style: solid;
+    margin-top: 7px;
+}
+
+.del_game{
+	background-color: rgb(247, 230, 200);
+    border-width: 1px;
+}
+
+.add_game{
+    background-color: rgb(247, 230, 200);
+    border-width: 1px;
+}
